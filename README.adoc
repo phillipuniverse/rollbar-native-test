@@ -1,0 +1,23 @@
+= Illustrates slow startup times using the Rollbar native agent
+
+. Build the project with `./gradlew bootJar`
+. Run the project,  see it start ups in ~1-2s
++
+[source,console]
+----
+java -jar build/libs/test-rollbar-1.0-SNAPSHOT.jar
+----
+. Stop and re-run with the agent, see startup times 15-20s
++
+[source,console]
+----
+java -agentpath:./librollbar_java_agent.dylib -jar build/libs/test-rollbar-1.0-SNAPSHOT.jar
+----
+
+On Linux, use the .so:
+
+[source,console]
+----
+java -agentpath:./librollbar_java_agent.so -jar build/libs/test-rollbar-1.0-SNAPSHOT.jar
+----
+
