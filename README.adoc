@@ -5,19 +5,19 @@
 +
 [source,console]
 ----
-java -jar build/libs/test-rollbar-1.0-SNAPSHOT.jar
+java -jar build/libs/test-rollbar-2.0-SNAPSHOT.jar
 ----
 . Stop and re-run with the agent, see startup times 15-20s
 +
 [source,console]
 ----
-java -agentpath:./librollbar_java_agent.dylib -jar build/libs/test-rollbar-1.0-SNAPSHOT.jar
+java -agentpath:./librollbar_java_agent.dylib -jar build/libs/test-rollbar-2.0-SNAPSHOT.jar
 ----
 
 On Linux, use the .so:
 
 [source,console]
 ----
-java -agentpath:./librollbar_java_agent.so -jar build/libs/test-rollbar-1.0-SNAPSHOT.jar
+java -agentpath:./librollbar_java_agent.so -jar build/libs/test-rollbar-2.0-SNAPSHOT.jar
 ----
 
